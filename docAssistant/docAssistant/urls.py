@@ -19,5 +19,5 @@ from doc import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.login),
+    path('', views.profile),
 ]
