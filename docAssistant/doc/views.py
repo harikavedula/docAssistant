@@ -11,8 +11,8 @@ def login(request):
         # print(user_pwd)
         # print(len(l0))
         for x in lo:
-            # print(x.email)
-            # print(x.pswd)
+            print(x.email)
+            print(x.pswd)
             if x.email==user_email and x.pswd==user_pwd:
                 # print(1)
                 request.session['email']=user_email
@@ -28,7 +28,7 @@ def login(request):
         if h==2:
             return redirect('vitals/')
         else:
-            return redirect('login/')
+            return render(request,'login.html')
     return render(request,'login.html')
 
 def profile(request):
